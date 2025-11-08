@@ -1,0 +1,95 @@
+:root {
+  --bg: #0c0f14;
+  --panel: #121620;
+  --accent: #22d3ee;
+  --accent2: #a78bfa;
+  --text: #eef2ff;
+  --muted: #8a93a8;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #0b0e14, #0f1320);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial;
+}
+.wrap {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+h1 {
+  font-size: 1.6rem;
+  margin: 10px 0 18px;
+}
+
+.calc {
+  background: var(--panel);
+  border: 1px solid #242a3a;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+.display {
+  width: 100%;
+  height: 62px;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  border-radius: 14px;
+  padding: 10px 14px;
+  background: #0b0e14;
+  color: var(--text);
+  text-align: right;
+  letter-spacing: 1px;
+}
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+button {
+  background: #1a2030;
+  color: var(--text);
+  border: 1px solid #2b3247;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.2s ease;
+}
+button:hover {
+  background: #1e2638;
+}
+button:active {
+  transform: translateY(1px);
+}
+
+button[data-op] {
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  border: none;
+  color: #0b0e14;
+  font-weight: 700;
+}
+.eq {
+  grid-row: span 2;
+  background: linear-gradient(135deg, #34d399, #22d3ee);
+  border: none;
+  color: #051019;
+  font-weight: 800;
+}
+.zero {
+  grid-column: span 2;
+}
+.hint {
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
